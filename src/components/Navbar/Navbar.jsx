@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router";
+import logo from "../../assets/logo.png";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -11,7 +12,7 @@ export default function Navbar() {
             to={"/"}
           >
             <img
-              src="/src/assets/logo.png"
+              src={logo}
               alt="Logo"
               width="48"
               height="48"
