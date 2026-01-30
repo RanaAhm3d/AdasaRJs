@@ -286,6 +286,10 @@ body {
   .fs-md-36px {
     font-size: 36px;
   }
+
+  .fs-md-48px {
+    font-size: 48px;
+  }
 }
 
 @media (min-width: 1024px) {

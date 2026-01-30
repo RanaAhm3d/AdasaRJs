@@ -19,7 +19,6 @@ export default function BlogDetails() {
         paragraph: body.join(" ").trim(),
       };
     });
-  console.log(post);
   return (
     <article className={`${styles.BlogDetails}`}>
       <BlogHero

@@ -15,6 +15,7 @@ export default function BlogHero({
   return (
     <>
       <div className={`${styles.BlogImageWrapper} position-relative`}>
+        <div className={`${styles.shadowOverlay} position-absolute `}></div>
         <div className={`${styles.BlogBadge} position-absolute`}>
           <nav
             className={`${styles.BlogBadgeNav} d-flex flex-row align-items-center gap-2`}
@@ -60,7 +61,9 @@ export default function BlogHero({
                 </div>
               </div>
             </div>
-            <h1 className="fs-30px text-white fw-bold mb-4">{title}</h1>
+            <h1 className="fs-30px fs-md-48px fs-lg-60px text-white fw-bold mb-4">
+              {title}
+            </h1>
             <div
               className={`${styles.BlogAuthorCard} d-flex flex-row align-items-center gap-3`}
             >
