@@ -1,0 +1,74 @@
+.sectionLabel {
+  padding: 8px 16px;
+  border-radius: 22px;
+  background: #f973161a;
+  border: 1px solid #f973164d;
+  position: relative;
+  align-items: center;
+  gap: 8px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-orange-500);
+    animation: light 2s ease-in-out infinite;
+  }
+  .pingWrapper {
+    position: relative;
+    display: inline-flex;
+    margin-right: 20px;
+    width: 10px;
+    height: 10px;
+    .circle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f97316;
+      border-radius: 50%;
+      opacity: 0.75;
+      animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+      z-index: 1;
+    }
+    .dot {
+      position: absolute;
+      top: 0;
+      right: -0.5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--color-orange-500);
+      z-index: 2;
+    }
+  }
+}
+
+@keyframes light {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  75% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}

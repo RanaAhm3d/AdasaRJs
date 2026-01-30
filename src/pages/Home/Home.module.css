@@ -1,0 +1,140 @@
+.choosenBlogs {
+  padding: 96px 0;
+  background-color: rgb(10, 10, 10);
+  border: 1px solid transparent;
+  .choosenBlogsTitle {
+    margin-bottom: 48px;
+    p {
+      margin-top: 16px;
+    }
+  }
+  .showAllBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: linear-gradient(
+      to right,
+      oklch(0.705 0.213 47.604) 0%,
+      oklch(0.646 0.222 41.116) 100%
+    );
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    i {
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      transform: translateY(-3px);
+      i {
+        transform: translateX(-3px);
+      }
+    }
+  }
+}
+
+.categories {
+  padding: 96px 0;
+  background-color: rgb(17, 17, 17);
+  .categoriesTitle {
+    margin-bottom: 48px;
+    h2 {
+      font-size: 36px;
+    }
+    p {
+      margin-top: 16px;
+      width: 70%;
+    }
+  }
+}
+
+.newestBlogs {
+  padding: 96px 0;
+  background-color: rgb(10, 10, 10);
+  .newestBlogsTitle {
+    margin-bottom: 48px;
+  }
+  .showBlogs {
+    i {
+      transition: all 0.1s ease-in-out;
+    }
+    &:hover {
+      color: var(--color-orange-400);
+      i {
+        transform: translateX(-3px);
+      }
+    }
+  }
+}
+
+.subscribe {
+  padding: 96px 0;
+  .subscribeContent {
+    padding: 0 16px;
+    margin: 0 64px;
+  }
+  background-color: rgb(10, 10, 10);
+  overflow: hidden;
+  .colorBackground {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 300px;
+    background: rgba(249, 115, 22, 0.1);
+    border-radius: 50%;
+    filter: blur(64px);
+  }
+}
+
+.glowEffect {
+  background: linear-gradient(
+    to left,
+    oklab(0.705 0.143615 0.157301 / 0.08) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  width: 230px;
+  height: 100%;
+  filter: blur(64px);
+}
+
+@media (min-width: 768px) {
+  .categories {
+    .categoriesTitle {
+      h2 {
+        font-size: 48px;
+      }
+      p {
+        width: 100%;
+      }
+    }
+  }
+  .subscribe {
+    .subscribeContent {
+      padding: 0 24px;
+      margin: 0 64px;
+    }
+    .colorBackground {
+      width: 600px;
+      height: 300px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .categories {
+    .categoriesTitle {
+      h2 {
+        font-size: 60px;
+      }
+    }
+  }
+  .subscribe {
+    .subscribeContent {
+      padding: 0 32px;
+      margin: 0 64px;
+    }
+    .colorBackground {
+      width: 600px;
+      height: 300px;
+    }
+  }
+}

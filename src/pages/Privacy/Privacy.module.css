@@ -1,0 +1,47 @@
+.privacy {
+  background-color: rgb(10, 10, 10);
+  .privacyContent {
+    padding: 64px 16px;
+    .containerWrapper {
+      padding: 24px;
+      background-color: oklab(0.705 0.143615 0.157301 / 0.1);
+      border: 1px solid oklab(0.705 0.143615 0.157301 / 0.2);
+      border-radius: 16px;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+      p {
+        color: oklab(0.837 0.0514698 0.117196 / 0.8);
+      }
+    }
+    a {
+      padding-right: 44px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .privacy {
+    .privacyContent {
+      padding: 64px 24px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .privacy {
+    .privacyContent {
+      margin: 0 64px;
+      padding: 64px 32px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .privacy {
+    .privacyContent {
+      margin: 0 272px;
+    }
+  }
+}

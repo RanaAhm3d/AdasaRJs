@@ -1,0 +1,73 @@
+.blogCard {
+  background-color: rgb(22, 22, 22);
+  border: 1px solid rgb(38, 38, 38);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    .blogCardImage {
+      .shadowOverlay {
+        opacity: 1;
+        z-index: 2;
+      }
+      img {
+        transform: scale(1.1);
+      }
+    }
+    h3 {
+      color: var(--color-orange-500);
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+  }
+  .blogCardImage {
+    overflow: hidden;
+    .shadowOverlay {
+      opacity: 0;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        oklab(0 0 0 / 0.6) 0%,
+        rgba(0, 0, 0, 0) 50%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      transition: all 0.3s ease-in-out;
+    }
+    .blogCardBadge {
+      z-index: 1000;
+      padding: 4px 12px;
+      background-color: var(--color-orange-500);
+      border-radius: 16px;
+      top: 16px;
+      right: 16px;
+    }
+  }
+  .blogCardContent {
+    padding: 20px;
+    h3 {
+      transition: all 0.3s ease-in-out;
+      margin-bottom: 12px;
+    }
+    .blogCardAvatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .blogCard {
+    height: 317px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blogCard {
+    height: fit-content;
+  }
+}

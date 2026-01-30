@@ -1,0 +1,146 @@
+.Blogs {
+  background-color: rgb(10, 10, 10);
+  .blogSearchCategoriesWrapper {
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(24px);
+    position: sticky;
+    top: 80px;
+    z-index: 200;
+    .blogSearchCategories {
+      padding: 16px 32px;
+      border-bottom: 0.1px solid;
+      .searchInputWrapper {
+        .searchInput {
+          width: 288px;
+          padding: 12px 48px 12px 20px;
+          background-color: rgb(22, 22, 22);
+          border-radius: 12px;
+          border: 1px solid rgb(38, 38, 38);
+          color: white;
+          &:focus {
+            border-color: var(--color-orange-500);
+            outline: 0;
+          }
+        }
+        i {
+          left: 10px;
+          bottom: 16px;
+        }
+      }
+    }
+  }
+  .blogsView {
+    padding: 48px 16px;
+    .pagination {
+      .paginationBtn {
+        width: 35px;
+        height: 35px;
+        background-color: rgb(22, 22, 22);
+        border: 1px solid rgb(38, 38, 38);
+        border-radius: 12px;
+        color: var(--color-neutral-400);
+        font-weight: 500;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          border-color: oklch(70.5% 0.213 47.604/0.5);
+          background-color: #1a1a1a;
+          color: white;
+        }
+      }
+      .active {
+        border-color: var(--color-orange-500);
+        background-color: var(--color-orange-500);
+        color: white;
+        &:hover {
+          border-color: var(--color-orange-500);
+          background-color: var(--color-orange-500);
+          color: white;
+        }
+      }
+      .disabled {
+        color: var(--color-neutral-600);
+        cursor: not-allowed;
+        background-color: rgb(10, 10, 10);
+        border: 1px solid rgb(38, 38, 38);
+        &:hover {
+          border-color: rgb(38, 38, 38);
+          background-color: rgb(10, 10, 10);
+          color: var(--color-neutral-600);
+        }
+      }
+    }
+    .blogCounterDisplay {
+      margin-bottom: 32px;
+    }
+    .blogViewStyle {
+      background-color: rgb(22, 22, 22);
+      border: 1px solid rgb(38, 38, 38);
+      padding: 4px;
+      border-radius: 12px;
+      .blogListViewBtn,
+      .blogGridViewBtn {
+        padding: 8px;
+        background-color: transparent;
+        border-radius: 8px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: transparent;
+        i,
+        svg {
+          color: var(--color-neutral-400);
+          font-size: 20px;
+        }
+      }
+      .active {
+        background-color: var(--color-orange-500);
+        i,
+        svg {
+          color: white;
+        }
+      }
+    }
+    .BlogClearFilter {
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: var(--color-orange-500);
+      }
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .Blogs {
+    .blogsView {
+      .pagination {
+        .paginationBtn {
+          width: 44px;
+          height: 44px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .Blogs {
+    .blogSearchCategories {
+      .searchInputWrapper {
+        .searchInput {
+          width: 255px;
+        }
+      }
+    }
+    .blogsView {
+      padding: 48px 24px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .Blogs {
+    .blogsView {
+      padding: 48px 32px;
+    }
+  }
+}

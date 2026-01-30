@@ -1,0 +1,13 @@
+.TagWrapper {
+  padding: 8px 16px;
+  color: var(--color-neutral-400);
+  background-color: rgb(26, 26, 26);
+  border: 1px solid rgb(38, 38, 38);
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    color: var(--color-orange-500);
+    border-color: oklab(70.485% 0.1259 0.13784/0.5);
+  }
+}

@@ -1,0 +1,29 @@
+.privacyTermsContent {
+  margin-top: 48px;
+
+  .container {
+    .icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: linear-gradient(
+        to right bottom,
+        oklch(0.705 0.213 47.604) 0%,
+        oklch(0.795 0.184 86.047) 100%
+      );
+    }
+  }
+  ul {
+    padding-right: 44px;
+    li {
+      margin-bottom: 12px;
+      .circle {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  p {
+    padding-right: 44px;
+  }
+}

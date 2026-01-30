@@ -1,0 +1,22 @@
+.BlogDetails {
+  background-color: rgb(10, 10, 10);
+  .BlogDetailsContent {
+    padding: 48px 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .BlogDetails {
+    .BlogDetailsContent {
+      padding: 48px 24px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .BlogDetails {
+    .BlogDetailsContent {
+      padding: 48px 32px;
+    }
+  }
+}

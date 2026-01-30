@@ -1,0 +1,163 @@
+.error {
+  background-color: rgb(10, 10, 10);
+  .glowOrangeEffect {
+    filter: blur(100px);
+    background: oklab(0.705 0.143615 0.157301 / 0.3);
+    top: 50px;
+    left: 70px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  .glowYellowEffect {
+    filter: blur(100px);
+    background: oklab(0.795 0.0126846 0.183562 / 0.3);
+    right: 80px;
+    bottom: 185px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  .errorGrid {
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(38, 38, 38, 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(38, 38, 38, 0.5) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .errorContent {
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 0 16px;
+    h1 {
+      font-size: 140px;
+      background: linear-gradient(
+        to right,
+        oklch(0.705 0.213 47.604) 0%,
+        oklch(0.795 0.184 86.047) 50%,
+        oklch(0.705 0.213 47.604) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .errorEmoji {
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      background: linear-gradient(
+        to right bottom,
+        oklab(0.705 0.143615 0.157301 / 0.2) 0%,
+        oklab(0.795 0.0126846 0.183562 / 0.2) 100%
+      );
+      border: 1px solid oklab(0.705 0.143615 0.157301 / 0.3);
+      .square {
+        width: 20px;
+        height: 20px;
+        border-radius: 8px;
+        background-color: var(--color-orange-500);
+        top: -10px;
+        right: -5px;
+        transform: rotate(12deg);
+        animation: jump 1s infinite;
+      }
+      .dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: var(--color-yellow-500);
+        bottom: 0;
+        left: -5px;
+        animation: light 2s ease-in-out infinite;
+      }
+    }
+    h2 {
+      font-size: 24px;
+    }
+    p {
+      margin-bottom: 32px;
+    }
+    .buttons {
+      margin-bottom: 48px;
+    }
+    .Link {
+      text-decoration: none;
+      &:hover {
+        color: var(--color-orange-400);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .error {
+    .glowOrangeEffect {
+      top: 160px;
+      left: 175px;
+    }
+    .glowYellowEffect {
+      right: 175px;
+      bottom: 160px;
+    }
+    .errorContent {
+      margin: 0 128px;
+      h1 {
+        font-size: 180px;
+      }
+      h2 {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .error {
+    .glowOrangeEffect {
+      background: oklab(0.705 0.143615 0.157301 / 0.2);
+      top: 80px;
+      left: 350px;
+      width: 300px;
+    }
+    .glowYellowEffect {
+      background: oklab(0.795 0.0126846 0.183562 / 0.1);
+      right: 250px;
+      bottom: 300px;
+      width: 300px;
+    }
+    .errorContent {
+      margin: 0 256px;
+      h1 {
+        font-size: 180px;
+      }
+      h2 {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@keyframes light {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(5px) rotate(12deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(12deg);
+  }
+  100% {
+    transform: translateY(5px) rotate(12deg);
+  }
+}

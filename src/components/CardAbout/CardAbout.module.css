@@ -1,0 +1,27 @@
+.cardAbout {
+  padding: 24px;
+  width: 252px;
+  height: 156px;
+  background-color: rgb(22, 22, 22);
+  border: 1px solid rgb(38, 38, 38);
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      oklch(0.705 0.213 47.604 / 0.1) 0%,
+      oklch(0.795 0.184 86.047 / 0.1) 100%
+    );
+    border-color: oklch(0.705 0.213 47.604 / 0.2);
+    h3 {
+      color: var(--color-orange-300);
+    }
+  }
+  & > div {
+    font-size: 30px;
+  }
+  h3 {
+    color: white;
+    margin-bottom: 8px;
+  }
+}

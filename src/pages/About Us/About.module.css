@@ -1,0 +1,101 @@
+.rateUs {
+  background-color: rgb(17, 17, 17);
+  padding-block: 80px;
+  border-block: 1px solid rgb(38, 38, 38);
+  .rateUsTitle {
+    margin-bottom: 64px;
+    h2 {
+      margin-bottom: 16px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 40px;
+        right: -20px;
+        border-radius: 5px;
+        background: linear-gradient(
+          oklch(0.705 0.213 47.604) 0%,
+          oklch(0.795 0.184 86.047) 100%
+        );
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 40px;
+        left: -20px;
+        border-radius: 5px;
+        background: linear-gradient(
+          oklch(0.705 0.213 47.604) 0%,
+          oklch(0.795 0.184 86.047) 100%
+        );
+      }
+    }
+  }
+}
+.ourTeam {
+  background-color: rgb(10, 10, 10);
+  padding-block: 80px;
+  .ourTeamTitle {
+    margin-bottom: 64px;
+    h2 {
+      margin-bottom: 16px;
+    }
+  }
+  .ourTeamAuthors {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.contactUs {
+  padding-block: 80px;
+  padding-inline: 16px;
+  background: linear-gradient(
+    to right bottom,
+    oklch(0.646 0.222 41.116) 0%,
+    oklch(0.705 0.213 47.604) 50%,
+    oklch(0.795 0.184 86.047) 100%
+  );
+  h2 {
+    margin-bottom: 24px;
+  }
+  p {
+    color: oklab(0.999994 0.0000455677 0.0000200868 / 0.8);
+  }
+  .contactBtn {
+    padding: 16px 32px;
+    border-radius: 12px;
+    background-color: rgb(10, 10, 10);
+    border: none;
+    color: var(--color-white);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+  .browseOutlinBtn {
+    padding: 16px 32px;
+    background-color: rgb(0, 0, 0, 0);
+    border: 1px solid oklab(0.999994 0.0000455678 0.0000200868 / 0.4);
+    border-radius: 12px;
+    color: var(--color-white);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .ourTeamAuthors {
+    margin: 0 144px;
+    padding: 0 32px;
+  }
+}
